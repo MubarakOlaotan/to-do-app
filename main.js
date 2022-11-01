@@ -24,8 +24,4 @@ function renderMovie() {
     `
     tasks.appendChild(newItem)
     input.value = ''
-    
-    
-
-    console.log(input.value.trim())
 }
