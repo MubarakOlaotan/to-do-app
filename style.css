@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    transition: all .5s linear;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 30px 0;
+    letter-spacing: 1px;
+}
+
+.todo-list {
+    width: 450px;
+    padding: 20px;
+    box-shadow: 0px 10px 5px 100px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 40px;
+}
+
+.list-head {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+}
+
+.entered-list {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.add-list {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.add-list.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tasks {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.item p {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.item-btn {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item.completed p {
+    text-decoration: line-through;
+    color: gray;
+}
