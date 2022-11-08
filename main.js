@@ -3,6 +3,8 @@ const addBtn = document.querySelector('.add-list')
 const tasks = document.querySelector('.tasks')
 
 
+
+
 function addBtnActive() {
     if (input.value.trim()) {
         addBtn.classList.add('active')
@@ -23,14 +25,26 @@ function renderMovie() {
     </div>
     `
     tasks.appendChild(newItem)
-    console.log(input.value)
-
     input.value = ''
     addBtnActive()
 }
+
+// iconBtn functionalities
+tasks.addEventListener('click', (e) => {
+    if (e.target.classList.contains('fa-xmark')) {
+        e.target.parentElement.parentElement.remove()
+    }
+})
+
+tasks.addEventListener('click', (e) => {
+    if (e.target.classList.contains('fa-pencil')) {
+        e.target.parentElement.parentElement.classList.toggle('completed')
+    }
+})
 
 
 
 // EventListeners
 addBtn.addEventListener('click', renderMovie)
 input.addEventListener('keyup', addBtnActive)
+

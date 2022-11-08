@@ -16,6 +16,8 @@ body {
     height: 100vh;
     width: 100vw;
     transition: all .5s linear;
+    position: relative;
+    overflow: auto;
 }
 
 @keyframes gradient {
@@ -110,4 +112,39 @@ body {
 .item.completed p {
     text-decoration: line-through;
     color: gray;
+}
+
+
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: 95vw;
+    }
+
+   .title {
+        text-align: center;
+        align-items: center;
+   }
+
+   .todo-list {
+        width: 90vw;
+        padding: 30px 15px;
+        margin-left: 20px;
+    }
+
+    .list-head {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-list {
+        padding: 20px;
+    }
+
+
 }
