@@ -123,11 +123,13 @@ body {
 
 @media only screen and (max-width: 600px) {
     body {
-        width: 95vw;
+        width: 90vw;
         height: 90vh;
     }
 
    .title {
+        font-size: 25px;
+        font-weight: 550;
         text-align: center;
         align-items: center;
    }
@@ -136,6 +138,8 @@ body {
         width: 90vw;
         padding: 30px 15px;
         margin-left: 20px;
+        background-color: inherit;
+
     }
 
     .list-head {
@@ -149,3 +153,4 @@ body {
 
    
 }
+
